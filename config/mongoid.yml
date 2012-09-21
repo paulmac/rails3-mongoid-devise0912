@@ -58,6 +58,7 @@ development:
 
     # Ensure all times are UTC in the app side. (default: false) 
     # use_utc: false
+    
 test:
   sessions:
     default:
@@ -67,6 +68,7 @@ test:
       options:
         consistency: :strong
 
+# ADDED FOR HEROKU
 <% if ENV['MONGOHQ_URL'] %>
   production:
     sessions:
