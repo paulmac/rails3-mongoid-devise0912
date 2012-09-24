@@ -69,11 +69,15 @@ test:
         consistency: :strong
 
 # ADDED FOR HEROKU
+# Mongo URI
+# User - heroku
+# mongodb://<user>:<password>@alex.mongohq.com:10088/app7775756
 <% if ENV['MONGOHQ_URL'] %>
   production:
     sessions:
       default:
-        uri: <%= ENV['MONGOHQ_URL'] %>
+#        uri: <%= ENV['MONGOHQ_URL'] %> 
+        uri: mongodb://heroku:@alex.mongohq.com:10088/app7775756
         options:
           skip_version_check: true
           safe: true
